@@ -28,7 +28,9 @@ class MyApp extends App<AppProps> {
   static async getInitialProps({ Component, ctx }) {
     ctx.store.dispatch({ type: 'FOO', payload: 'foo' });
 
-    const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+    const pageProps = Component.getInitialProps
+      ? await Component.getInitialProps(ctx)
+      : {};
 
     return { pageProps };
   }
