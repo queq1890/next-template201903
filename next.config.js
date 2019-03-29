@@ -4,9 +4,10 @@ const path = require('path');
 
 module.exports = withTypescript({
   webpack(config, options) {
-    config.resolve.alias = {
-      '~': './src'
-    };
+    // maybe we need to add this options when we use src/components dir
+    // config.resolve.alias = {
+    //   '~': './src'
+    // };
 
     // typetyeckする
     if (options.isServer) {
